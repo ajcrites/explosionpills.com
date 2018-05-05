@@ -1,1 +1,62 @@
-Incoming...
+<header>
+  <h1>Andrew Crites</h1>
+  <div>Occassionally known as Explosion Pills</div>
+
+  <aside>
+    <div>Mobiquity</div>
+    <div>Engineering Director of Emerging Technologies</div>
+  </aside>
+</header>
+
+<nav>
+  <ul>
+    <li>
+      <a href="https://stackoverflow.com/users/454533/explosion-pills">
+        Stack Overflow
+      </a>
+      <a href="https://medium.com/@ExplosionPills">
+        Blog
+      </a>
+      <a href="https://github.com/ajcrites">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/andrew-crites-a1441846/">
+        LinkedIn
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <article>
+    <section>
+      I am a software developer with <span id="years-experience"></span> years
+      of experience mostly in web development and related fields. I have a
+      passion for web and mobile app development using hybrid and native-ish
+      technologies. Within the past couple of years I have acquired a passion
+      for TypeScript as a language and RxJS as a library. I also really enjoy
+      infrastructure as code although I don't get to work with it as much as I
+      would like. I enjoy working with node.js as a command line tool, back end
+      or server as well as various kinds of relational and non-relational
+      databases, mostly MySQL and MongoDB. I am tangentially interested in some
+      other languages and platforms including Rust and Elixir.
+    </section>
+    <section>
+      In addition to software development as a career, I am also an
+      instructor, manager, mentor, and researcher.
+    </section>
+    <section>
+      Above anything else, I'm a husband and stepfather. I live a quiet life
+      and enjoy reading, watching modern and classic movies and TV cooking,
+      I partake in all kinds of spectator sports including watching football
+      and video game speedrunning alike. I also play various kinds of video
+      games with friends and family when I have the time and desire but not
+      nearly as much as I used to. I love all kinds of electronic music.
+    </section>
+  </article>
+</main>
+
+<script>
+  document.querySelector('#years-experience').textContent =
+    (new Date).getFullYear() - 2009;
+</script>
