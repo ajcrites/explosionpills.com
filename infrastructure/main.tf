@@ -12,3 +12,7 @@ resource "netlify_site" netlify_site {
     repo_branch = "master"
   }
 }
+
+terraform {
+  backend "s3" {}
+}
