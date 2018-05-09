@@ -1,4 +1,17 @@
+<style>
+  header img {
+    border-radius: 50%;
+    border: 4px solid #000088;
+  }
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+</style>
+
 <header>
+  <img width=64 height=64 src=/img/acrites-the-person.jpg alt="Andrew Crites">
+  <img width=64 height=64 src=/img/boomer-the-explosion-pill.png alt="Boomer">
   <h1>Andrew Crites</h1>
   <div>Occassionally known as Explosion Pills</div>
 
@@ -11,17 +24,28 @@
 <nav>
   <ul>
     <li>
-      <a href="https://stackoverflow.com/users/454533/explosion-pills">
-        Stack Overflow
+      <a href=https://stackoverflow.com/users/454533/explosion-pills>
+        <img width=32 height=32 src=/img/so-icon.png alt="Stack Overflow">
       </a>
-      <a href="https://medium.com/@ExplosionPills">
-        Blog
+    </li>
+    <li>
+      <a href=https://medium.com/@ExplosionPills>
+        <img width=32 height=32 src=/img/medium-icon.png alt=Blog>
       </a>
-      <a href="https://github.com/ajcrites">
-        GitHub
+      </li>
+      <li>
+      <a href=https://github.com/ajcrites>
+        <img width=32 height=32 src=/img/github-icon.png alt=GitHub>
       </a>
-      <a href="https://www.linkedin.com/in/andrew-crites-a1441846/">
-        LinkedIn
+      </li>
+      <li>
+      <a href=https://www.linkedin.com/in/andrew-crites-a1441846/>
+        <img width=32 height=32 src=/img/linkedin-icon.png alt=LinkedIn>
+      </a>
+      </li>
+      <li>
+      <a href=https://twitter.com/ExplosionPills>
+        <img width=32 height=32 src=/img/twitter-icon.png alt=Twitter>
       </a>
     </li>
   </ul>
@@ -29,7 +53,7 @@
 
 <main>
   <article>
-    <section>
+    <p>
       I am a software developer with <span id="years-experience"></span> years
       of experience mostly in web development and related fields. I have a
       passion for web and mobile app development using hybrid and native-ish
@@ -40,23 +64,75 @@
       or server as well as various kinds of relational and non-relational
       databases, mostly MySQL and MongoDB. I am tangentially interested in some
       other languages and platforms including Rust and Elixir.
-    </section>
-    <section>
+    </p>
+    <p>
       In addition to software development as a career, I am also an
-      instructor, manager, mentor, and researcher.
-    </section>
-    <section>
+      instructor, manager, mentor, and researcher. Elegant software development
+      is a passion of mine ... and something I hope to be able to do myself
+      some day.
+    </p>
+    <p>
       Above anything else, I'm a husband and stepfather. I live a quiet life
       and enjoy reading, watching modern and classic movies and TV cooking,
       I partake in all kinds of spectator sports including watching football
       and video game speedrunning alike. I also play various kinds of video
       games with friends and family when I have the time and desire but not
       nearly as much as I used to. I love all kinds of electronic music.
-    </section>
+    </p>
   </article>
+
+  <section class=skills>
+    <section>
+      <h1>Frontend Development</h1>
+      <p>
+        I focus mostly on single page applications using React and Angular. I
+        have a strong preference for TypeScript. Most of my work is done for
+        clients in the retail space. I also use Ionic and React Native to build
+        full fledged native applications for iOS and Android. In the past, I've
+        worked on large scale commercial websites PHP with jQuery and even some
+        vanilla JS and custom-made frameworks.
+      </p>
+    </section>
+
+    <section>
+      <h1>Backend Development</h1>
+      <p>
+        Most of my back end work uses node.js. I work on small to large web APIs
+        and libraries using node.js, more recently with TypeScript. I have also
+        worked with all kinds of scripting languages including python and ruby
+        as well as compiled languages and frameworks ranging from rust to Elixir
+        and Elm. I started out as a PHP develop on the LAMP stack.
+      </p>
+    </section>
+
+    <section>
+      <h1>Persistence</h1>
+      <p>
+        I have worked with a wide range of persistence technologies from
+        database to caching to search. This includes relational SQL and
+        non-relational/document-driven so-called NoSQL databases. I use
+        variations of MySQL as well as MongoDB most frequently. I originally
+        started with MySQL on the LAMP stack and have since worked with both
+        Percona and MariaDB as variations.
+      </p>
+    </section>
+
+    <section>
+      <h1>Infastructure</h1>
+      <p>
+        I'm very passionate about IaC and serverless development. I think that
+        IaC concepts are still emerging, and I'm excited to work with them when
+        I can since I think that they are the path forward to true DevOps. Most
+        of my infrastructure work involves AWS, but I have worked with other
+        providers when needed.
+      </p>
+    </section>
+  </section>
 </main>
 
 <script>
   document.querySelector('#years-experience').textContent =
     (new Date).getFullYear() - 2009;
+
+  document.querySelectorAll('img').forEach(img => img.title = img.alt);
 </script>
