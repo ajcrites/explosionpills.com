@@ -5,7 +5,20 @@
   }
   .skills {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "skill"
+  }
+  @media (min-width: 600px) {
+    .skills {
+      grid-template-columns: 2fr 2fr;
+      grid-template-areas: "skills skills";
+    }
+  }
+  @media (min-width: 1000px) {
+    .skills {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "skills skills skills skills";
+    }
   }
 </style>
 
