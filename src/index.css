@@ -1,0 +1,54 @@
+body {
+  font-size: 24px;
+  font-family: Lato, 'sans-serif';
+}
+.header {
+  display: grid;
+  grid-template-areas:
+  "logo"
+  "name"
+  "subtitle"
+  "org"
+  "position";
+}
+.header img {
+  border-radius: 50%;
+  border: 4px solid #000088;
+}
+.logo {
+  grid-area: logo;
+}
+.name {
+  grid-area: name;
+}
+.subtitle {
+  grid-area: subtitle;
+}
+.org {
+  grid-area: org;
+}
+.position {
+  grid-area: position;
+}
+.skills {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "skill"
+}
+@media (min-width: 600px) {
+  .header {
+    grid-template-areas:
+    "logo name org"
+    "subtitle subtitle position";
+  }
+  .skills {
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "skills skills";
+  }
+}
+@media (min-width: 1000px) {
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "skills skills skills skills";
+  }
+}

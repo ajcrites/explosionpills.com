@@ -1,36 +1,17 @@
-<style>
-  header img {
-    border-radius: 50%;
-    border: 4px solid #000088;
-  }
-  .skills {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas: "skill"
-  }
-  @media (min-width: 600px) {
-    .skills {
-      grid-template-columns: 2fr 2fr;
-      grid-template-areas: "skills skills";
-    }
-  }
-  @media (min-width: 1000px) {
-    .skills {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "skills skills skills skills";
-    }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="index.css">
 
-<header>
-  <img width=64 height=64 src=/img/acrites-the-person.jpg alt="Andrew Crites">
-  <img width=64 height=64 src=/img/boomer-the-explosion-pill.png alt="Boomer">
-  <h1>Andrew Crites</h1>
-  <div>Occassionally known as Explosion Pills</div>
+<header class=header>
+  <figure class=logo>
+    <img width=64 height=64 src=/img/acrites-the-person.jpg alt="Andrew Crites">
+    <img width=64 height=64 src=/img/boomer-the-explosion-pill.png alt="Boomer">
+  </figure>
+  <h1 class=name>Andrew Crites</h1>
+  <div class=subtitle>Occassionally known as Explosion Pills</div>
 
   <aside>
-    <div>Mobiquity</div>
-    <div>Engineering Director of Emerging Technologies</div>
+    <div class=org>Mobiquity</div>
+    <div class=position>Engineering Director of Emerging Technologies</div>
   </aside>
 </header>
 
