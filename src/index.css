@@ -1,19 +1,26 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
 body {
   font-size: 24px;
   font-family: Lato, 'sans-serif';
   margin: 0;
   padding: 0;
   background-color: #ccc;
+  height: 100%;
+  overflow: auto;
 }
 .container {
   width: 92%;
   margin: 0 auto;
   background-color: white;
-  padding: 0 15px 25px 15px;
+  padding: 0 25px 25px 25px;
   box-shadow: 6px -3px 15px -4px rgba(0, 0, 0, 0.8), -6px -3px 8px -4px rgba(0, 0, 0, 0.8);
 }
 
 .header {
+  padding-top: 20px;
   display: grid;
   grid-template-areas:
   "logo"
@@ -21,11 +28,12 @@ body {
   "subtitle"
   "org"
   "position";
+  row-gap: 10px;
 }
 .name {
   margin: 0;
 }
-.header img {
+.logo img {
   border-radius: 50%;
   border: 4px solid #000088;
 }
@@ -44,24 +52,35 @@ body {
 
 .subtitle {
   grid-area: subtitle;
+  font-size: 16px;
+  font-style: italic;
+  align-self: end;
 }
-.org {
-  grid-area: org;
+.company {
+  grid-area: company;
+  align-self: end;
 }
-.position {
-  grid-area: position;
+.nav {
+  text-align: right;
+  grid-area: nav;
 }
+
 .skills {
   display: grid;
   grid-gap: 20px;
   grid-template-areas: "skill"
 }
+.skill-title {
+  text-align: center;
+  line-height: 1em;
+  height: 2em;
+}
 @media (min-width: 600px) {
   .header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "logo name org"
-    "subtitle subtitle position";
+    "logo name company"
+    "subtitle subtitle nav";
   }
   .skills {
     grid-template-columns: 2fr 2fr;
