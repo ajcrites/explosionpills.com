@@ -1,0 +1,58 @@
+/*
+ * Logo animations
+ * First child is my picture. Last is boomer, the explosion pill. Boomer should
+ * appear above me at first then animate to the back like coasters
+ */
+.logo {
+  position: relative;
+}
+.logo img {
+  position: absolute;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 1s;
+}
+.logo :first-child {
+  left: 40%;
+  transform: translateX(-40%);
+  top: 0;
+  z-index: 2;
+  animation-name: move-over;
+}
+.logo :last-child {
+  left: 50%;
+  transform: translate(-50%, 15%);
+  z-index: 3;
+  animation-name: move-under;
+}
+
+@keyframes move-under {
+  0% {
+    left: 50%;
+    top: 0;
+  }
+  50% {
+    left: 35%;
+    top: -35%;
+  }
+  100% {
+    left: 50%;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes move-over {
+  0% {
+    left: 40%;
+    top: 0;
+  }
+  50% {
+    left: 65%;
+    top: 35%;
+  }
+  100% {
+    left: 40%;
+    top: 0;
+  }
+}

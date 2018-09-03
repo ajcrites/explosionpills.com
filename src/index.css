@@ -19,6 +19,10 @@ body {
   box-shadow: 6px -3px 15px -4px rgba(0, 0, 0, 0.8), -6px -3px 8px -4px rgba(0, 0, 0, 0.8);
 }
 
+.keep-together {
+  display: inline-block;
+}
+
 .header {
   padding-top: 20px;
   display: grid;
@@ -43,7 +47,6 @@ body {
 }
 .name {
   grid-area: name;
-  text-align: center;
   white-space: nowrap;
 }
 
@@ -68,6 +71,7 @@ body {
 
 .bio {
   margin-top: 50px;
+  font-size: 18px;
 }
 
 .skills {
@@ -82,14 +86,39 @@ body {
 }
 @media (min-width: 600px) {
   .header {
-    grid-template-columns: 200px 1fr 300px;
     grid-template-areas:
-    "logo name company"
-    "subtitle subtitle nav";
+    "logo name"
+    "subtitle company"
+    "nav nav";
+    grid-column-gap: 10px;
+  }
+  .nav {
+    text-align: center;
+  }
+  .nav ul {
+    border-top: none;
+    padding-top: 20px;
+  }
+  .name {
+    text-align: right;
+  }
+  .bio {
+    margin-top: 25px;
   }
   .skills {
     grid-template-columns: 2fr 2fr;
     grid-template-areas: "skills skills";
+  }
+}
+@media (min-width: 900px) {
+  .name {
+    text-align: center;
+  }
+  .header {
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-areas:
+    "logo name company"
+    "subtitle subtitle nav";
   }
 }
 @media (min-width: 1000px) {
