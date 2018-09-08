@@ -8,22 +8,35 @@
 }
 .logo img {
   position: absolute;
-  animation-fill-mode: forwards;
   animation-delay: 1s;
   animation-duration: 1s;
+  transition-property: top, left;
+  transition-duration: .5s;
 }
 .logo :first-child {
   left: 40%;
-  transform: translateX(-40%);
   top: 0;
+
+  transform: translateX(-40%);
   z-index: 2;
   animation-name: move-over;
 }
 .logo :last-child {
   left: 50%;
+  top: 0;
   transform: translate(-50%, 15%);
   z-index: 3;
-  animation-name: move-under;
+
+  /* animation-fill-mode: forward overrides styles, so we have a separate
+   * animation style to keep the z-index: 1 for Boomer so he stays under */
+  animation-name: move-under, complete;
+  animation-fill-mode: none, forwards;
+}
+
+@keyframes complete {
+  100% {
+    z-index: 1;
+  }
 }
 
 @keyframes move-under {
@@ -55,4 +68,13 @@
     left: 40%;
     top: 0;
   }
+}
+
+.logo:hover :first-child {
+  top: -20%;
+  left: 30%;
+}
+.logo:hover :last-child {
+  top: 20%;
+  left: 60%;
 }
